@@ -10,7 +10,7 @@ This file is to be placed in its respective folder on Google Drive for the Graph
 -  [ ] Get necessary information about video
    -  [ ] Bound Input
    -  [ ] Take length of video
-   -  [ ] Take file path from user
+   -  [X] Take file path from user
    -  [ ] Test validity of file location
       -  [ ] Create a file at given location: If pass - delete; Else Loop until valid
 
