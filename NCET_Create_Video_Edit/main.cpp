@@ -1,40 +1,43 @@
 #include <iostream>
 #include <string>
+#include <Windows.h>
 #include "Globals.h"
+#include "File_manip.h"
 using namespace std;
-
-// Function Calls
-string get_file_location(void);
 
 // Main Function
 int main()
 {
+	// Local Variables
 	string loc = "";
-
-	cout << "Description: This program is used to identify times and issues with videos and format, write, and save to a specified format." << endl << endl;
-
-	loc = get_file_location();
-
-	// Assign value to global variable
+	char file_code;
 	Globals g;
-	
-	cout << "Current location is: " << g.get_location() << endl;
+	File_Manipulation FM;
 
-	g.set_location(loc);
-	cout << "Updated location is: " << g.get_location() << endl;
+	// Description for project
+	cout << "Description: This program is used to input times and descriptions where issues are found in videos." << endl << endl;
+	system("pause");
+	system("CLS");
 
-	cout << "File is being saved to " << g.get_location() << endl;
+	// Location data
+	FM.set_location();
+	loc = FM.get_location();
+	system("CLS");
+	cout << "Testing path existance";
+	Sleep(1000);
 
+	for (int i = 0; i < 3; i++)
+	{
+		cout << ".";
+		Sleep(1000);
+	}
+
+	system("CLS");
+	cout << "Location Exists: " << loc << endl << endl << endl << endl;
+
+	// File Data
+
+	// End Program Gracefully
 	system("pause");
 	return 0;
-}
-
-// Function Definitions
-string get_file_location(void)
-{
-	string loc = "";
-	cout << "Where is this file being saved? ";
-	cin >> loc;
-
-	return loc;
 }

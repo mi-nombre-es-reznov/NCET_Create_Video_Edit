@@ -7,11 +7,9 @@ using namespace std;
 class Globals
 {
 private:
-	string location = "";
 	string filename = "To-Do.txt";
+	char file_exists;
 public:
-	string get_location(void);
-	void set_location(string loc);
 	string get_filename(void);
 };
 
