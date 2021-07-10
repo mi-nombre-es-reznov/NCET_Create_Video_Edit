@@ -12,6 +12,7 @@ private:
 	int seconds;
 public:
 	string get_filename(void);
+	int get_video_length(void);
 };
 
 #endif

@@ -13,6 +13,7 @@ int main()
 	   ----------------------------- */
 	string loc = "";
 	char file_code = 'E';
+	int length = 0;
 	Globals g;
 	File_Manipulation FM;
 
@@ -47,6 +48,17 @@ int main()
 		cout << "Location Exists: " << loc << endl << endl << endl << endl;
 		file_code = FM.File_existance(loc);
 	}
+
+	/* -----------------------------
+			   Video details
+	   ----------------------------- */
+	while (length == 0)
+	{
+		system("CLS");
+		length = g.get_video_length();
+	}
+
+	cout << "Video Length: " << length << endl;
 
 	/* -----------------------------
 		   End Program Gracefully

@@ -7,9 +7,9 @@ This program is expected to create a .txt file using the information provided to
 This file is to be placed in its respective folder on Google Drive for the Graphics Designer/Video Editor to see and use as the guide regarding which edits need to be done and the time at which it needs to be done at.
 
 ## To-Do List
--  [ ] Get necessary information about video
-   -  [ ] Bound Input
-   -  [ ] Take length of video
+-  [X] Get necessary information about video
+   -  [X] Bound Input
+   -  [X] Take length of video
    -  [X] Take file path from user
    -  [X] Test validity of file location
       -  [X] Create a file at given location: If pass - delete; Else Loop until valid
