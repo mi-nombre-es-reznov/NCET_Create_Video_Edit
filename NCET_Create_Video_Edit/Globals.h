@@ -9,6 +9,7 @@ class Globals
 private:
 	string filename = "To-Do.txt";
 	char file_exists;
+	int seconds;
 public:
 	string get_filename(void);
 };

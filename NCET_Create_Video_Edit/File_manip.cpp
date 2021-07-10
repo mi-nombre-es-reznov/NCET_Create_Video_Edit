@@ -7,6 +7,11 @@
 #include <Windows.h>
 using namespace std;
 
+/* ----------------------------- 
+         Location Functions
+   -----------------------------*/
+
+// Returns location data
 string File_Manipulation::get_location(void)
 {
 	return location;
@@ -59,16 +64,42 @@ void File_Manipulation::set_location(void)
 	location = loc;
 }
 
+/* -----------------------------
+		   File Functions
+   -----------------------------*/
+
+// Check file existance
 char File_Manipulation::File_existance(string loc)
 {
+	Globals g;
+
 	// Local variables
-	string new_file = "Test_File.txt";
-	char status = 'E';
-	ofstream tester;
+	string new_file = (loc + "/" + g.get_filename());
+	char status;
+	fstream tester;
 
-	// Navigate to location
+	// Navigate to location and test file existance.
+	tester.open(new_file, ios::in);
 
-	// Test file existance
+	// Determine path from file existence
+	if (!tester)
+	{
+		tester.open(new_file, ios::out);
+		status = 'N';
+	}
+	else
+	{
+		cout << "File exists! Re-routing";
+		Sleep(1000);
+
+		for (int i = 0; i < 3; i++)
+		{
+			cout << ".";
+			Sleep(1000);
+		}
+
+		status = 'E';
+	}
 
 	// Return status
 	return status;

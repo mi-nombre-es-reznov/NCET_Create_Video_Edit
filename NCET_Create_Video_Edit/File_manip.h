@@ -9,9 +9,11 @@ private:
 	string file_loc;
 	char loc_code;
 public:
-	// Function declarations
+	// Location Functions
 	string get_location(void);
 	void set_location(void);
 	bool location_existance(string);
+
+	// File Functions
 	char File_existance(string);
 };

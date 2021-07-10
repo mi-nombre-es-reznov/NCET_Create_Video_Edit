@@ -12,7 +12,7 @@ This file is to be placed in its respective folder on Google Drive for the Graph
    -  [ ] Take length of video
    -  [X] Take file path from user
    -  [X] Test validity of file location
-      -  [ ] Create a file at given location: If pass - delete; Else Loop until valid
+      -  [X] Create a file at given location: If pass - delete; Else Loop until valid
 
 -  [ ] Take input from user
    -  [ ] A list of times and descriptions for that time
