@@ -8,11 +8,14 @@ class Globals
 {
 private:
 	string filename = "To-Do.txt";
-	char file_exists;
+	char file_exists = 'a';
 	int seconds;
 public:
 	string get_filename(void);
 	int get_video_length(void);
+	int get_time(void);
+	void set_time(int);
+	string get_description(void);
 };
 
 #endif

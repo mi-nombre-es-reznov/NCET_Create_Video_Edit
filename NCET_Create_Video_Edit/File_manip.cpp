@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 #include <filesystem>
 #include <Windows.h>
+#include <stdio.h>
 using namespace std;
 
 /* ----------------------------- 
@@ -56,6 +57,7 @@ void File_Manipulation::set_location(void)
 		}
 		catch (const char *exception)	// Catch if string is empty
 		{
+			system("CLS");
 			cout << "Failure! Exception: " << exception << endl;
 			valid_loc = false;	// Stay in loop
 		}
@@ -67,14 +69,24 @@ void File_Manipulation::set_location(void)
 /* -----------------------------
 		   File Functions
    -----------------------------*/
+void File_Manipulation::set_path(string path)
+{
+	file_path = path;
+}
+
+string File_Manipulation::get_path(void)
+{
+	return file_path;
+}
 
 // Check file existance
 char File_Manipulation::File_existance(string loc)
 {
 	Globals g;
+	File_Manipulation fm;
 
 	// Local variables
-	string new_file = (loc + "/" + g.get_filename());
+	string new_file = (loc + "\\" + g.get_filename());
 	char status;
 	fstream tester;
 
@@ -85,7 +97,11 @@ char File_Manipulation::File_existance(string loc)
 	if (!tester)
 	{
 		tester.open(new_file, ios::out);
+		tester.close();
+
+		remove(new_file.c_str()) == 0 ? cout << "Deleted successfully" : cout << "File deletion failed";
 		status = 'N';
+		Sleep(500);
 	}
 	else
 	{
@@ -103,4 +119,27 @@ char File_Manipulation::File_existance(string loc)
 
 	// Return status
 	return status;
+}
+
+void File_Manipulation::write_file(string form, string loc)
+{
+	// Local variables
+	Globals g;
+	ofstream f;
+	string path = (loc + "\\" + g.get_filename());
+
+	f.open(path, ios::app);
+
+	if (f.is_open())
+	{
+		f << form << endl;
+		f.close();
+		cout << "Data written successfully!" << endl;
+		Sleep(1000);
+	}
+	else
+	{
+		cout << "File failed to open and write!" << endl;
+		Sleep(1000);
+	}
 }

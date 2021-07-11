@@ -14,22 +14,22 @@ This file is to be placed in its respective folder on Google Drive for the Graph
    -  [X] Test validity of file location
       -  [X] Create a file at given location: If pass - delete; Else Loop until valid
 
--  [ ] Take input from user
-   -  [ ] A list of times and descriptions for that time
-   -  [ ] Bound check times between 00:00 :arrow_right: MAX(video time)
-   -  [ ] Have the ability to select from a preset list of descriptions
-      -  [ ] Delete loading screen
-      -  [ ] Start Video Here
-      -  [ ] Start Here
-      -  [ ] Continue Here
-      -  [ ] End Video Here
-      -  [ ] End Video with White Background
-      -  [ ] Blur notification
-      -  [ ] Custom
--  [ ] Format data to be written to .txt file
--  [ ] Write all necessary, formatted data to .txt file
-   -  [ ] Hardcode a name that exists across all files *(Maybe __To-Do.txt__)*
--  [ ] Save .txt file to a specific location (__Google Drive__)
+-  [X] Take input from user
+   -  [X] A list of times and descriptions for that time
+   -  [X] Bound check times between 00:00 :arrow_right: MAX(video time)
+   -  [X] Have the ability to select from a preset list of descriptions
+      -  [X] Delete loading screen
+      -  [X] Start Video Here
+      -  [X] Start Here
+      -  [X] Continue Here
+      -  [X] End Video Here
+      -  [X] End Video with White Background
+      -  [X] Blur notification
+      -  [X] Custom
+-  [X] Format data to be written to .txt file
+-  [X] Write all necessary, formatted data to .txt file
+   -  [X] Hardcode a name that exists across all files *(Maybe __To-Do.txt__)*
+-  [X] Save .txt file to a specific location (__Google Drive__)
 
 ## Possible Languages to be used?
 * C++
