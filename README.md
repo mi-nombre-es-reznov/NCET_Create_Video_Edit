@@ -1,4 +1,4 @@
-# NCET_Create_Video_Edit
+# NCET_Create_Video_Edit -- Program Complete
 The purpose of this program is to help automate the process of finding needed edits in YouTube videos prior to editing. This program is to take input, format data, and write a .txt file to a given location on Google Drive.
 
 ## What is this program expected to do?
